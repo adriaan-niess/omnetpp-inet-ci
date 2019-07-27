@@ -1,0 +1,1 @@
+Dockerfile for building Omnet++ projects that also depend on INET
