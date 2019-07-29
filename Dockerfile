@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 # Download and build Omnet++
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -qq -y install build-essential gcc g++ bison flex perl-base \
-    python python3 tcl-dev libxml2-dev zlib1g-dev default-jre wget
+    python python3 tcl-dev libxml2-dev libxml2-utils zlib1g-dev default-jre wget
 WORKDIR /root
 RUN wget https://github.com/omnetpp/omnetpp/releases/download/omnetpp-5.4.1/omnetpp-5.4.1-src-linux.tgz \
     && tar -xzf omnetpp-5.4.1-src-linux.tgz \
