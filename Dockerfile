@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 # Install packages
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -qq -y install build-essential gcc g++ bison flex perl-base \
-    python python3 tcl-dev libxml2-dev libxml2-utils zlib1g-dev default-jre wget cppcheck
+    python python3 tcl-dev libxml2-dev libxml2-utils zlib1g-dev default-jre wget cppcheck python3
 
 # Download and build Omnet++
 WORKDIR /root
