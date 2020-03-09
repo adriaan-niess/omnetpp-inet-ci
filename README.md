@@ -1,6 +1,8 @@
-Dockerfile for building and testing Omnet++ projects. The docker container contains:
+# Omnet++ & INET Docker Container
 
-- Omnet 5.4.1
-- INET 4.1.0 (release and debug build)
-- Cppcheck
+Dockerfile for building and testing Omnet++ projects. Uses Ubuntu 18.04 as base and contains:
+
+- Omnet 5.5.1
+- INET 4.2.0 (release and debug build)
+- Cppcheck 1.89
 - Python3
