@@ -7,10 +7,10 @@ RUN apt-get update && apt-get -qq -y install build-essential gcc g++ bison flex 
 
 # Omnet++
 WORKDIR /root
-RUN wget https://github.com/omnetpp/omnetpp/releases/download/omnetpp-5.5.1/omnetpp-5.5.1-src-linux.tgz \
-    && tar -xzf omnetpp-5.5.1-src-linux.tgz \
-    && rm omnetpp-5.5.1-src-linux.tgz \
-    && mv omnetpp-5.5.1 /root/omnetpp
+RUN wget https://github.com/omnetpp/omnetpp/releases/download/omnetpp-5.6.1/omnetpp-5.6.1-src-linux.tgz \
+    && tar -xzf omnetpp-5.6.1-src-linux.tgz \
+    && rm omnetpp-5.6.1-src-linux.tgz \
+    && mv omnetpp-5.6.1 /root/omnetpp
 WORKDIR /root/omnetpp
 ENV PATH=$PATH:/root/omnetpp/bin
 RUN ./configure WITH_TKENV=no WITH_QTENV=no WITH_OSG=no WITH_OSGEARTH=no WITH_PARSIM=no \
@@ -35,3 +35,4 @@ ENV PATH=$PATH:/root/cppcheck/bin
 
 # Set final workdir
 WORKDIR /root/models
+
