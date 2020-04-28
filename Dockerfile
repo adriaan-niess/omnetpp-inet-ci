@@ -6,7 +6,7 @@ RUN apt-get update && apt-get -qq -y install build-essential gcc g++ bison flex\
     perl-base python tcl-dev libxml2-dev libxml2-utils zlib1g-dev default-jre \
     wget cmake python3 qt5-default libqt5opengl5-dev libglu1-mesa-dev \
     freeglut3-dev mesa-common-dev libcanberra-gtk-module \
-    libcanberra-gtk3-module python3 python3-sphinx python-sphinx-rtd-theme
+    libcanberra-gtk3-module python3 python3-sphinx python-sphinx-rtd-theme lcov
 
 # Omnet++
 WORKDIR /root
@@ -26,9 +26,9 @@ COPY org.eclipse.ui.ide.prefs /root/omnetpp/ide/configuration/.settings/org.ecli
 # INET
 RUN mkdir -p /root/models
 WORKDIR /root/models
-RUN wget https://github.com/inet-framework/inet/releases/download/v4.1.2/inet-4.1.2-src.tgz \
-    && tar -xzf inet-4.1.2-src.tgz \
-    && rm inet-4.1.2-src.tgz \
+RUN wget https://github.com/inet-framework/inet/releases/download/v4.2.0/inet-4.2.0-src.tgz \
+    && tar -xzf inet-4.2.0-src.tgz \
+    && rm inet-4.2.0-src.tgz \
     && mv inet4 inet
 WORKDIR /root/models/inet
 RUN make makefiles \
